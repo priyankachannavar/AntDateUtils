@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class TestAntDateUtils {
+public class AntDateUtilsTest {
 
 	@Test
 	public void test() {

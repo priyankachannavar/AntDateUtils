@@ -24,7 +24,7 @@
 	<target name="compile" depends="init" description="compile the source ">
 		<!-- Compile the java code from ${src.dir} into ${build.dir} -->
 		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}" >
-		<exclude name="**/TestAntDateUtils.java" />
+		<exclude name="**/*Test*.java" />
 		</javac>
 	</target>
 
@@ -48,5 +48,18 @@
 
 	<!-- Default, run this -->
 	<target name="main" depends="clean, compile, dist" />
+	
+	 <!-- <target name="junit" depends="jar">
+        <junit printsummary="yes">
+            <classpath>
+                <path refid="classpath"/>
+                <path refid="application"/>
+            </classpath>
+
+            <batchtest fork="yes">
+                <fileset dir="${src.dir}" includes="**/*Test*.java"/>
+            </batchtest>
+        </junit>
+    </target> -->
 
 </project>
